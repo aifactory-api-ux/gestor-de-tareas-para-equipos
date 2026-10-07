@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary-base: #2563EB;
+  --color-primary-hover: #1D4ED8;
+  --color-primary-active: #1E40AF;
+  --color-primary-subtle: #EFF6FF;
+  --color-primary-border: #BFDBFE;
+
+  --color-neutrals-canvas: #F8FAFC;
+  --color-neutrals-surface: #FFFFFF;
+  --color-neutrals-surface-muted: #F1F5F9;
+  --color-neutrals-surface-strong: #E2E8F0;
+  --color-neutrals-border: #E2E8F0;
+  --color-neutrals-border-strong: #CBD5E1;
+  --color-neutrals-text-primary: #0F172A;
+  --color-neutrals-text-secondary: #475569;
+  --color-neutrals-text-tertiary: #64748B;
+  --color-neutrals-text-disabled: #94A3B8;
+  --color-neutrals-white: #FFFFFF;
+
+  --color-semantic-success: #059669;
+  --color-semantic-success-bg: #ECFDF5;
+  --color-semantic-success-border: #A7F3D0;
+  --color-semantic-warning: #D97706;
+  --color-semantic-warning-bg: #FFF7ED;
+  --color-semantic-warning-border: #FED7AA;
+  --color-semantic-danger: #DC2626;
+  --color-semantic-danger-bg: #FEF2F2;
+  --color-semantic-danger-border: #FECACA;
+  --color-semantic-info: #2563EB;
+  --color-semantic-info-bg: #EFF6FF;
+  --color-semantic-info-border: #BFDBFE;
+  --color-semantic-overdue: #B91C1C;
+
+  --color-status-pending: #64748B;
+  --color-status-pending-bg: #F1F5F9;
+  --color-status-in-progress: #2563EB;
+  --color-status-in-progress-bg: #EFF6FF;
+  --color-status-done: #059669;
+  --color-status-done-bg: #ECFDF5;
+
+  --color-priority-high: #DC2626;
+  --color-priority-high-bg: #FEF2F2;
+  --color-priority-medium: #D97706;
+  --color-priority-medium-bg: #FFF7ED;
+  --color-priority-low: #64748B;
+  --color-priority-low-bg: #F1F5F9;
+
+  --font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --font-size-display: 28px;
+  --font-size-h1: 22px;
+  --font-size-h2: 18px;
+  --font-size-body: 14px;
+  --font-size-small: 12px;
+  --font-size-caption: 11px;
+
+  --line-height-display: 36;
+  --line-height-h1: 30;
+  --line-height-h2: 26;
+  --line-height-body: 20;
+  --line-height-small: 16;
+  --line-height-caption: 14;
+
+  --letter-spacing-display: -0.02em;
+  --letter-spacing-h1: -0.01em;
+  --letter-spacing-caption: 0.02em;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --spacing-2xl: 32px;
+  --spacing-3xl: 40px;
+  --spacing-4xl: 48px;
+  --spacing-page-desktop: 32px;
+  --spacing-page-mobile: 16px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-pill: 999px;
+
+  --shadow-subtle: 0px 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-card: 0px 1px 3px rgba(15, 23, 42, 0.06), 0px 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sticky: 0px 4px 12px rgba(15, 23, 42, 0.08);
+  --shadow-overlay: 0px 16px 40px rgba(15, 23, 42, 0.16);
+
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+  --easing: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --focus-ring: 2px solid #2563EB;
+  --focus-offset: 2px;
+
+  --sidebar-width: 260px;
+  --header-height: 64px;
+  --max-content-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-neutrals-text-primary);
+  background-color: var(--color-neutrals-canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@layer utilities {
+  .text-display {
+    font-size: var(--font-size-display);
+    line-height: var(--line-height-display);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-display);
+  }
+
+  .text-h1 {
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-h1);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-h1);
+  }
+
+  .text-h2 {
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-h2);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .text-body {
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+    font-weight: var(--font-weight-regular);
+  }
+
+  .text-body-medium {
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .text-small {
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+    font-weight: var(--font-weight-regular);
+  }
+
+  .text-caption {
+    font-size: var(--font-size-caption);
+    line-height: var(--line-height-caption);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--letter-spacing-caption);
+  }
+}

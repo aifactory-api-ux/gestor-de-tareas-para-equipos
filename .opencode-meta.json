@@ -1,0 +1,6 @@
+{
+  "enums": {},
+  "exports": {
+    "frontend/src/hooks/useAuth.ts": ["useAuth"]
+  }
+}
